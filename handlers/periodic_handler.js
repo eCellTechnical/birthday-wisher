@@ -1,6 +1,10 @@
 const cron = require("node-cron");
 const axios = require("axios");
-const { NODE_ENV } = require("../config/secret");
+const { NODE_ENV, URL } = require("../config/secret");
+const {
+	sendEmailToIndividual,
+	sendEmailToEcell
+} = require("../controllers/send_mail");
 const time = NODE_ENV === "development" ? "*/1 * * * *" : "0 0 * * *"; // everyday 0:0:0
 const scheduled = true,
 	timezone = "Asia/Kolkata";
@@ -18,6 +22,24 @@ const tickFunction = async () => {
 			dob.getDate() === today.getDate() &&
 			dob.getMonth() === today.getMonth()
 		) {
+			// await axios({
+			//     method: 'post',
+			//     url: URL + "/send/individual",
+			//     data: {
+			//       email: item.email,
+			//       name: item.name,
+			//     },
+			//     headers: {
+			//         'content-type': 'application/json'
+			//     }
+			//   });
+			await sendEmailToIndividual({
+				email: item.email,
+				name: item.name
+			});
+			await sendEmailToEcell({
+				name: item.name
+			});
 			console.log("Birthday", item.name);
 			//console.log(data);
 		} else {

@@ -5,7 +5,7 @@ const {
 
 const router = require("express").Router();
 
-router.get("/individual", sendEmailToIndividual);
-router.get("/ecell", sendEmailToEcell);
+router.post("/individual", sendEmailToIndividual);
+router.post("/ecell", sendEmailToEcell);
 
 module.exports = router;

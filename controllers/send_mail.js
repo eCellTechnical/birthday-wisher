@@ -14,12 +14,12 @@ let transporter = nodemailer.createTransport({
 		pass: EMAIL_PASS
 	}
 });
-exports.sendEmailToIndividual = async (req, res) => {
-	console.log(req.body);
+exports.sendEmailToIndividual = async user => {
+	//console.log(req.body);
 	ejs.renderFile(
 		path.join(__dirname, "/mail_template/birthday_mail.ejs"),
 		{
-			name: req.body.name
+			name: user.name
 		},
 		(err, data) => {
 			if (err) {
@@ -31,7 +31,7 @@ exports.sendEmailToIndividual = async (req, res) => {
 			}
 			let mailOptions = {
 				from: "ecellwebtechnical@gmail.com",
-				to: req.body.email,
+				to: user.email,
 				subject: "Test",
 				html: data
 			};
@@ -52,11 +52,11 @@ exports.sendEmailToIndividual = async (req, res) => {
 		}
 	);
 };
-exports.sendEmailToEcell = async (req, res) => {
+exports.sendEmailToEcell = async user => {
 	ejs.renderFile(
 		path.join(__dirname, "/mail_template/inform_mail.ejs"),
 		{
-			name: req.body.name
+			name: user.name
 		},
 		(err, data) => {
 			if (err) {
