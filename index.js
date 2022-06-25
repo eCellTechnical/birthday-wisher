@@ -5,6 +5,11 @@ require("dotenv").config();
 
 const { NODE_ENV, PORT } = require("./config/secret");
 
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use("/send", require("./routes/send_mail"));
+app.set("view engine", "ejs");
+
 app.get("/", (req, res) => {
 	return res.status(200).json({
 		success: true,
