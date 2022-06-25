@@ -6,7 +6,8 @@
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"dev": "nodemon index.js",
-		"lint": "prettier \"**/*.{js, json, md, html, css, yml}\" --write"
+		"lint": "prettier \"**/*.{js, json, md, html, css, yml}\" --write",
+		"prepare": "husky install"
 	},
 	"repository": {
 		"type": "git",
@@ -39,11 +40,7 @@
 	"lint-staged": {
 		"*.{js, jsx, json, md, html, css, yml}": [
 			"prettier --write"
-		]
-	},
-	"husky": {
-		"hooks": {
-			"pre-commit": "lint-staged"
-		}
+		],
+		"*.{js,css,md}": "prettier --write"
 	}
 }
