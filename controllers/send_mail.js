@@ -68,9 +68,9 @@ exports.sendEmailToEcell = async user => {
 				});
 			}
 			let mailOptions = {
-				from: "ecellwebtechnical@gmail.com",
+				from: '"Birthday Alert!!" <ecellwebtechnical@gmail.com>',
 				to: "ecell@kiet.edu",
-				subject: "Test: Birthday Alert",
+				subject: `${user.name}: Birthday Alert`,
 				html: data
 			};
 
