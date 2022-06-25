@@ -30,9 +30,9 @@ exports.sendEmailToIndividual = async user => {
 				});
 			}
 			let mailOptions = {
-				from: "ecellwebtechnical@gmail.com",
+				from: '"Friends from E-Cell" <ecellwebtechnical@gmail.com>',
 				to: user.email,
-				subject: "Test",
+				subject: "Team e-Cell Wishes You a very Happy Birthday",
 				html: data
 			};
 
