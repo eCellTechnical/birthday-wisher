@@ -21,7 +21,7 @@ app.get("/", (req, res) => {
 	});
 });
 
-app.listen(PORT, () => {
+app.listen(PORT || 5000, () => {
 	console.log(
 		`Server is running on port ${PORT} 🚀`,
 		`\nIn ${NODE_ENV} mode`

@@ -1,20 +1,5 @@
 module.exports = [
 	{
-		name: "Tester 1",
-		email: "nishantjawla12225@gmail.com",
-		date_of_birth: "2001-06-25"
-	},
-	{
-		name: "Tester 2",
-		email: "nishantjawla12225@gmail.com",
-		date_of_birth: "2001-06-21"
-	},
-	{
-		name: "Tester 3",
-		email: "nishantjawla12225@gmail.com",
-		date_of_birth: "2001-06-25"
-	},
-	{
 		name: "Jassi Sandhu",
 		email: "jassivarsha@gmail.com",
 		date_of_birth: "2001-06-26"
@@ -37,7 +22,7 @@ module.exports = [
 	{
 		name: "Parneet Raghuvanshi ",
 		email: "parneetraghuvanshi@gmail.com",
-		date_of_birth: "nice try!"
+		date_of_birth: "2002-07-30"
 	},
 	{
 		name: "Nishant Jawla",
@@ -114,11 +99,11 @@ module.exports = [
 		email: "sakettiwari076@gmail.com",
 		date_of_birth: "2002-12-19"
 	},
-		{
+	{
 		name: "Tejaswita Agarwal",
 		email: "agarwaltejaswita@gmail.com",
 		date_of_birth: "2001-07-09"
-	},	
+	},
 	{
 		name: "Madhav Garg",
 		email: "madhav.2024it1023@kiet.edu",
@@ -129,7 +114,19 @@ module.exports = [
 		email: "dhruv.2125csit1130@kiet.edu",
 		date_of_birth: "unknown"
 	},
-
-
-
+	{
+		name: "Iqra Amin",
+		email: "iqraamin14@gmail.com",
+		date_of_birth: "2002-08-07"
+	},
+	{
+		name: "Aryan Sharma",
+		email: "aryansharma2909@gmail.com",
+		date_of_birth: "2002-09-29"
+	},
+	{
+		name: "Unnati Mishra",
+		email: "unnatimis27@gmail.com",
+		date_of_birth: "2002-12-27"
+	}
 ];
