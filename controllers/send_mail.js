@@ -44,6 +44,7 @@ exports.sendEmailToIndividual = async user => {
 						error: error
 					});
 				}
+				console.log("Message sent: %s", info.messageId);
 				return res.status(200).json({
 					success: true,
 					message: "Email sent successfully"

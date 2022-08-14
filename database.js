@@ -128,5 +128,10 @@ module.exports = [
 		name: "Unnati Mishra",
 		email: "unnatimis27@gmail.com",
 		date_of_birth: "2002-12-27"
+	},
+	{
+		name: "Shivam Dwivedi",
+		email: "shivamd1408@gmail.com",
+		date_of_birth: "2002-08-14"
 	}
 ];
